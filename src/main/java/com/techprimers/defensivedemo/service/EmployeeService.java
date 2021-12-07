@@ -34,6 +34,7 @@ public class EmployeeService {
     }
 
     public List<Employee> getAll() {
+
         List<Employee> employees = null;
         try {
             employees = repository.findAll();
