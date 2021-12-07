@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "86df3846-d4ff-4324-8449-9364b4a8e453",
+		"name": "PW_ChaosMonkey",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PW_ChaosMonkey-GET Rainbow",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getrainbow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getrainbow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PW_ChaosMonkey-GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/chaosmonkey",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"chaosmonkey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PW_ChaosMonkey-status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/chaosmonkey/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"chaosmonkey",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PW_ChaosMonkey-enable",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/chaosmonkey/disabled",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"chaosmonkey",
+						"disabled"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PW_ChaosMonkey-Disable",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/chaosmonkey/disable",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"chaosmonkey",
+						"disable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PW_ChaosMonkey-watchersGET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/chaosmonkey/watchers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"chaosmonkey",
+						"watchers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PW_ChaosMonkey-watchers POST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"controller\": true,\r\n  \"restController\": true,\r\n  \"service\": true,\r\n  \"repository\": true,\r\n  \"component\": true,\r\n  \"restTemplate\": false,\r\n  \"webClient\": false,\r\n  \"actuatorHealth\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/actuator/chaosmonkey/watchers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"chaosmonkey",
+						"watchers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PW_ChaosMonkey-assaults-GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/chaosmonkey/assaults",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"chaosmonkey",
+						"assaults"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PW_ChaosMonkey-assaults-POST-Latency",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"level\": 1,\r\n  \"latencyRangeStart\": 2000,\r\n  \"latencyRangeEnd\": 5000,\r\n  \"latencyActive\": true,\r\n  \"exceptionsActive\": false,\r\n  \"killApplicationActive\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/actuator/chaosmonkey/assaults",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"chaosmonkey",
+						"assaults"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PW_ChaosMonkey-assaults-POST-Assault custom services",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"level\": 1,\r\n  \"latencyRangeStart\": 2000,\r\n  \"latencyRangeEnd\": 5000,\r\n  \"latencyActive\": true,\r\n  \"exceptionsActive\": true,\r\n  \"killApplicationActive\": false,\r\n  \"watchedCustomServices\": [\r\n    \"com.example.chaos.monkey.chaosdemo.controller.HelloController.sayHello\",\r\n    \"com.example.chaos.monkey.chaosdemo.controller.HelloController.sayGoodbye\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/actuator/chaosmonkey/assaults",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"chaosmonkey",
+						"assaults"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PW_ChaosMonkey-assaults-POST-Assault with custom Exception",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"level\": 1,\r\n  \"latencyRangeStart\": 2000,\r\n  \"latencyRangeEnd\": 5000,\r\n  \"latencyActive\": true,\r\n  \"exceptionsActive\": true,\r\n  \"killApplicationActive\": false,\r\n  \"exception\": {\r\n    \"type\": \"java.lang.IllegalArgumentException\",\r\n    \"arguments\": [\r\n      {\r\n        \"className\": \"java.lang.String\",\r\n        \"value\": \"custom illegal argument exception\"\r\n      }\r\n    ]\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/actuator/chaosmonkey/assaults",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"chaosmonkey",
+						"assaults"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
